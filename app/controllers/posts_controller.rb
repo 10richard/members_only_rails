@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+    before_action :user_signed_in?
 
     def index
         @posts = Post.all
@@ -19,7 +20,8 @@ class PostsController < ApplicationController
 
     private
         def post_params
-
+            #post_params.user_id = current_user.id
+            params.require(:post_params)
         end
     
 end
