@@ -13,15 +13,14 @@ class PostsController < ApplicationController
         @post = Post.new(post_params)
 
         if @post.save
-            redirect_to @post and return
+            redirect_to :root and return
         end
         render :new, status: :unprocessable_entity
     end
 
     private
         def post_params
-            #post_params.user_id = current_user.id
-            params.require(:post_params)
+            params.require(:post).permit(:title, :content, :user_id)
         end
     
 end
