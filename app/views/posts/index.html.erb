@@ -1,4 +1,13 @@
-
-<div>
-    <p>Number of Posts: <%= Post.all.count %></p>
-</div>
+<% @posts.each do |p| %>
+    <div class='post' >
+        <div>
+            <%= p.title %>
+        </div>
+        <div>
+            <%= p.body %>
+        </div>
+        <div>
+            <p>Author: <%= User.find(p.user_id).name if user_signed_in? %></p>
+        </div>
+    </div>
+<% end %>
