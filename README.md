@@ -1,24 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Practice with user auth and sessions. Allow the user to create posts only if they are signed in. Change the display of the posts based on if the user is signed in or not (if user is not signed in, then author of the post will be hidden).
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The website is extremely ugly, but oh well we move
+¯\_(ツ)_/¯
