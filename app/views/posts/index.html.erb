@@ -7,7 +7,7 @@
             <%= p.body %>
         </div>
         <div>
-            <p>Author: <%= User.find(p.user_id).name if user_signed_in? %></p>
+            <p>Author: <%= user_signed_in? ? User.find(p.user_id).name : 'Sign in to see the author' %></p>
         </div>
     </div>
 <% end %>
